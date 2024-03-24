@@ -1,0 +1,23 @@
+
+.ul {
+  list-style: none;
+  padding: 0;
+  background-color: var(--color-main-4);
+
+  li {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2px;
+    margin: 0;
+
+    .link {
+        font-size: 10px;
+        font-weight: 400;
+        color: var(--color-base-100);
+    }
+  }
+}

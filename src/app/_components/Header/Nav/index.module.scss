@@ -1,0 +1,52 @@
+@use '../../../_css/queries.scss' as *;
+
+.nav {
+  display: flex;
+  gap: calc(var(--base) / 4) var(--base);
+  align-items: center;
+  flex-wrap: wrap;
+  opacity: 1;
+  transition: opacity 100ms linear;
+  visibility: visible;
+
+  > * {
+    text-decoration: none;
+  }
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.link {
+  color: var(--color-main-1);
+  border: 2px solid var(--color-main-1);
+  border-radius: 20px;
+  padding: 4px 24px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  background: none;
+    
+}
+
+.userLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-main-5);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 4px;
+  background: var(--color-main-1);
+  border: 2px solid var(--color-base-300);
+  border-radius: 100%;
+  width: 2.5rem;
+  height: 2.5rem;
+}

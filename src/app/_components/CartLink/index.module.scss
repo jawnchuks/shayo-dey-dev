@@ -1,0 +1,15 @@
+.cartLink {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.quantity {
+  margin-left: 2px;
+}
+
+.cartIcon {
+  color: var(--theme-elevation-700);
+  width: 1.5rem;
+  height: 1.5rem;
+}
