@@ -1,0 +1,94 @@
+@use '../../../_css/queries.scss' as *;
+
+.footer {
+  padding: calc(var(--base) * 4) 0;
+  background-color: var(--color-main-3);
+  color: var(--theme-elevation-0);
+
+  @include small-break {
+    padding: calc(var(--base) * 2) 0;
+  }
+}
+
+:global([data-theme="dark"]) {
+  .footer {
+    background-color: var(--color-main-3);
+    color: var(--theme-elevation-1000);
+  }
+}
+
+.heading {
+  color: var(--color-base-100);
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: calc(var(--base) / 2) var(--base);
+
+  @include small-break {
+    display: grid;
+    grid-template-columns: auto;
+    gap: calc(var(--base) * 2) var(--base);
+
+  }
+}
+
+.logo {
+  width: 150px;
+
+  @include small-break {
+    width: 100px;  
+  }
+
+  @include extra-small-break {
+    width: 80px; 
+  }
+}
+.cards {
+  width: 80px;
+
+  @include small-break {
+    width: 60px;  
+  }
+
+  @include extra-small-break {
+    width: 40px; 
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--base) / 4) var(--base);
+  align-items: start;
+  flex-wrap: wrap;
+  opacity: 1;
+  transition: opacity 100ms linear;
+  visibility: visible;
+
+  > * {
+    text-decoration: none;
+  } 
+  
+  a {
+    color: var(--color-base-100);
+
+    &:hover {
+          color: var(--color-main-5);
+    }
+  }
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  background: var(--color-main-5);
+  color: var(--color-main-3);
+}
+
+
+.hide {
+  display: none;
+}

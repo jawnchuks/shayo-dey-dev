@@ -1,5 +1,83 @@
 @import "../../_css/common";
 
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+  display: grid;
+  justify-content: center;
+  place-content:  center;
+  padding: 0;
+  grid-template-columns: repeat(2, 1fr);
+
+
+  @include small-break {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @include extra-small-break {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.background {
+  width: 100%;
+  z-index: 1;
+  @include small-break {
+    display: none;
+  }
+  @include extra-small-break {
+    display: none;
+  }
+}
+
 .createAccount {
-  margin-bottom: var(--block-padding);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+}
+
+.params {
+  margin-top: var(--base);
+}
+
+.formBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.03;
+  z-index: 1;
+
+   @include small-break {
+      width: 500%;
+
+  }
+  @include extra-small-break {
+      width: 500%;
+
+  }
+}
+
+.logo {
+  width: 30%;
+  margin: 0 auto;
+  height:  auto;
+  z-index: 3;
+  margin-top: -10%;
+
+
+   @include small-break {
+      margin-top: -60%;
+
+  }
+  @include extra-small-break {
+       margin-top: -60%;
+
+  }
 }

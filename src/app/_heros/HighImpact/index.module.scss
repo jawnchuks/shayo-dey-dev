@@ -57,6 +57,9 @@
 .content {
   flex-basis: 3/5;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap:  var(--base);
 }
 
 .dropdown {

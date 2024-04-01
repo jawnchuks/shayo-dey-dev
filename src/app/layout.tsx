@@ -5,7 +5,6 @@ import { Oswald, Sora } from 'next/font/google'
 import { AdminBar } from './_components/AdminBar'
 import { Footer } from './_components/Footer'
 import { Header } from './_components/Header'
-import HeaderMarquee from './_components/Header/HeaderMarquee'
 import { Providers } from './_providers'
 import { InitTheme } from './_providers/Theme/InitTheme'
 import { mergeOpenGraph } from './_utilities/mergeOpenGraph'
@@ -35,7 +34,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className={`${sora.variable} ${oswald.variable}`}>
         <Providers>
           <AdminBar />
-          <HeaderMarquee />
           {/* @ts-expect-error */}
           <Header />
           <main className="main">{children}</main>
